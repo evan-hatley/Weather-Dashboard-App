@@ -14,3 +14,12 @@ color: white;
 text-align: center;
 font-weight: bolder;
 }
+
+.weather-dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.current-weather, .five-day-forecast {
+    width: 45%;
+}
