@@ -33,4 +33,4 @@ This is a simple weather app where the user just needs to input a city, and the 
 As of now, the application is lacking the ability to save user's search information and display previous search buttons. Most of the Local Storage code is written, but I'm working to debug the createElement button.
 
 ## Application Link
-The deployed application can be found at 
+The deployed application can be found at https://evan-hatley.github.io/Weather-Dashboard-App/
