@@ -11,7 +11,7 @@ document.querySelector('.btn').addEventListener('click', function() {
 
     searchHistory.push(city);
         localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-// sets the fetch for the Current Weather. Iused two separate fetch requests to get different results for this and the five day forecast
+// sets the fetch for the Current Weather. I used two separate fetch requests to get different results for this and the five day forecast
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + APIKey + '&units=imperial')
         .then(function(response) {
             return response.json();
@@ -60,18 +60,17 @@ for (let i = 0; i < dailyForecast.length; i++) {
 }
   });
 });
-// IN PROGRESS - Debug the querySelector so that the button will appear.
-document.querySelector('.btn').addEventListener('click', function() {
-    const city = document.getElementById('cityInput').value;
-    // This next code snippet was to ensure that each city would be displayed in the search history once
-    if (!searchHistory.includes(city)) {
-      searchHistory.push(city);
-      localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-      // This is supposed to create a new button elemnent to the HTML but even after hours of debugging, I can't get it to render
-      const btn = document.createElement('button');
-      btn.textContent = city;
-      btn.addEventListener('click', function() {
-      });
-      document.getElementById('searchHistoryContainer').appendChild(btn);
-    }
-  });
+
+  function loadHistoryBtn() {
+    var loadedHistory = localStorage.getItem('searchHistory');
+    console.log(loadedHistory);
+    for (let i = 0; i <loadedHistory.length; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = loadedHistory[i];
+        btn.addEventListener('click', function() {
+
+        }
+    )};
+  }
+
+  loadHistoryBtn();
