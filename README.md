@@ -30,7 +30,7 @@ THEN I am again presented with current and future conditions for that city
 This is a simple weather app where the user just needs to input a city, and the API will use the geographic coordinates to display the current and future weather.
 
 ## Limitations
-As of now, the application is lacking the ability to save user's search information and display previous search buttons. Most of the Local Storage code is written, but I'm working to debug the createElement button.
+As of now, the application stores the user's local storage in the console, but it does not create the search history buttons. I'm working to fix that soon.
 
 ## Application Link
 The deployed application can be found at https://evan-hatley.github.io/Weather-Dashboard-App/
